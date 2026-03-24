@@ -4,8 +4,8 @@ export const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Admission', href: '#admission' },
   { label: 'Testimonials', href: '#testimonials' },
-  { label: 'YouTube', href: '#youtube' },
-  { label: 'Nitin Goswami', href: '#nitin' },
+  // { label: 'YouTube', href: '#youtube' },
+  // { label: 'Nitin Goswami', href: '#nitin' },
 ];
 
 export const heroStats = [
@@ -14,123 +14,170 @@ export const heroStats = [
   { value: '95%', label: 'Positive Feedback' },
 ];
 
+export const impactStats = [
+  {
+    icon: '👨‍🎓',
+    value: '1000+',
+    label: 'Students Trained',
+  },
+  {
+    icon: '💼',
+    value: '500+',
+    label: 'Students Started Earning',
+  },
+  {
+    icon: '⭐',
+    value: 'Trusted',
+    label: 'by Students Across India',
+  },
+];
+
 export const impactItems = [
   {
     title: 'Career Guidance Workshops',
-    desc: 'Students ko clear roadmap, confidence aur real-world direction dene ke liye guided sessions.',
-    metric: '12K+ students'
+    desc: 'Structured sessions designed to give students clarity, confidence, and a real-world career roadmap.',
+    metric: '12K+ Students',
   },
   {
-    title: 'Digital Awareness Drives',
-    desc: 'Rural aur urban youth ke liye online opportunities aur learning resources ki awareness.',
-    metric: '30+ campaigns'
+    title: 'Digital Awareness Initiatives',
+    desc: 'Helping both rural and urban youth discover online opportunities, digital skills, and learning resources.',
+    metric: '30+ Campaigns',
   },
   {
-    title: 'Skill Development Support',
-    desc: 'Communication, presentation aur technology adoption ke practical modules.',
-    metric: '5K+ learners'
+    title: 'Skill Development Programs',
+    desc: 'Hands-on training in communication, presentation, and modern technology skills for real-world success.',
+    metric: '5K+ Learners',
   },
   {
-    title: 'Mentorship Access',
-    desc: 'Experts aur achievers ke through regular mentorship touchpoints aur Q&A sessions.',
-    metric: '80+ mentors'
+    title: 'Expert Mentorship Access',
+    desc: 'Regular mentorship sessions with industry experts, achievers, and live Q&A interactions.',
+    metric: '80+ Mentors',
   },
   {
     title: 'Community Building',
-    desc: 'Young creators aur learners ko ek positive growth-focused ecosystem me connect karna.',
-    metric: '100+ events'
+    desc: 'Creating a strong ecosystem where young learners and creators grow together with shared goals.',
+    metric: '100+ Events',
   },
   {
-    title: 'Motivation to Action',
-    desc: 'Sirf inspiration nahi, balki execution ke liye resources aur structured opportunities.',
-    metric: '10X engagement'
+    title: 'From Motivation to Action',
+    desc: 'Not just inspiration — structured guidance and resources to help students take real action.',
+    metric: '10X Engagement',
   },
 ];
 
 export const admissionHighlights = [
   {
     title: 'Easy Registration',
-    desc: 'Simple online application form with smooth mobile-friendly flow.',
+    desc: 'A simple and mobile-friendly online application process.',
     icon: '📝'
   },
   {
     title: 'Guided Counseling',
-    desc: 'Students aur parents ke liye step-by-step counseling support.',
+    desc: 'Step-by-step guidance for both students and parents throughout the admission journey.',
     icon: '🎯'
   },
   {
     title: 'Program Selection',
-    desc: 'Interest, goals aur growth track ke hisaab se right program guidance.',
+    desc: 'Personalized guidance to choose the right program based on goals and interests.',
     icon: '🚀'
   },
   {
     title: 'Fast Confirmation',
-    desc: 'Transparent process, timely updates aur structured onboarding.',
+    desc: 'Transparent process with timely updates and structured onboarding.',
     icon: '✅'
   },
 ];
 
 export const admissionSteps = [
-  'Inquiry / Call / WhatsApp se connect karein',
-  'Admission counselor se guidance lein',
-  'Application form submit karein',
-  'Required details verify honge',
-  'Seat confirmation aur onboarding complete hoga',
+  'Connect with us via inquiry, call, or WhatsApp',
+  'Receive guidance from an admission counselor',
+  'Submit your application form',
+  'Verification of required details',
+  'Seat confirmation and onboarding completion',
 ];
 
 export const testimonials = [
   {
-    name: 'Riya Sharma',
-    role: 'Student',
+    name: 'Himsi Sharma',
+    role: 'Capgemini',
     quote:
-      'NG Network ne mujhe sirf motivate nahi kiya, balki ek practical direction bhi di. Sessions ka impact genuinely life changing tha.'
+      'I want to thank NG Networks for helping me get my dream job. Through their Quest Program, I was able to understand my weak areas and Nitin sir helped me overcome them. He even guided me in interview preparation before my HR round. NG Networks helped me get placed in Capgemini as a Network Engineer with an annual package of 6.7 LPA. Thank you NG Networks & Nitin Sir.'
   },
   {
-    name: 'Aman Verma',
-    role: 'Learner',
+    name: 'Dr. Balasubramanian R',
+    role: 'Professor at IIT Roorkee',
     quote:
-      'Team ka mentorship model bahut strong hai. Har workshop ke baad action plan milta hai jo growth ko real banata hai.'
+      'NG Networks is doing a commendable job in bridging the gap between academic learning and industry requirements. Their structured approach and commitment to quality education truly help students build strong technical foundations.'
   },
   {
-    name: 'Pooja Singh',
-    role: 'Parent',
+    name: 'Nikhil Dagar',
+    role: 'Orange',
     quote:
-      'Admission aur guidance process bahut smooth tha. Communication clear tha aur confidence build hua.'
+      'I joined NG Networks to find a job and build a career in the IT domain. I learned a lot and upgraded my skills. This helped me achieve my dream job right after lockdown. Nitin sir guided me through important topics so I could get placed quickly. It worked, and the results are here!'
   },
   {
-    name: 'Deepak Kumar',
-    role: 'Community Member',
+    name: 'Student',
+    role: 'NG Networks Learner',
     quote:
-      'Premium experience, strong values aur youth-focused content. NG Network ka presentation aur execution dono impressive hain.'
+      'The learning experience at NG Networks is truly premium. From mentorship to real-world training, everything is designed to help students grow with confidence and clarity.'
+  },
+  {
+    name: 'Rohit Sharma',
+    role: 'Delhi',
+    rating: 5,
+    quote:
+      'I joined NG Networks with zero knowledge. Now I’m earning ₹15,000/month from freelancing!'
+  },
+  {
+    name: 'Priya Verma',
+    role: 'Lucknow',
+    rating: 5,
+    quote:
+      'Best decision of my life. The guidance is practical and easy to follow.'
+  },
+  {
+    name: 'Aman Khan',
+    role: 'Mumbai',
+    rating: 5,
+    quote:
+      'Nitin sir personally guides students. This is not just a course — it’s a career platform.'
+  },
+  {
+    name: 'Sneha Gupta',
+    role: 'Jaipur',
+    rating: 5,
+    quote:
+      'Within 2 months, I got my first client. Highly recommend NG Networks!'
   },
 ];
 
 export const youtubeVideos = [
   {
-    id: 'ysz5S6PUM-U',
-    title: 'Motivational Growth Session',
-    desc: 'High-energy talk focused on ambition, mindset aur execution.'
+    id: 'TsssjbVq0_s',
+    title: 'Break Into Cybersecurity: SOC Training with 100% Job Support',
+    desc: 'Learn how NG Networks guides students toward cybersecurity careers with practical training and placement-focused support.'
   },
   {
-    id: 'aqz-KE-bpKQ',
-    title: 'Student Guidance Podcast',
-    desc: 'Career clarity, digital opportunities aur smart decision making.'
+    id: 'vhn4QKstXW4',
+    title: 'Transform Your Career with NG Networks Real-Time Training',
+    desc: 'A closer look at real-time learning, mentorship, and the career transformation journey at NG Networks.'
   },
   {
-    id: 'dQw4w9WgXcQ',
-    title: 'Community Inspiration Video',
-    desc: 'Community building aur consistent action ke around engaging content.'
+    id: '23bcKOdrZ38',
+    title: "Manish's Journey: From Struggles to Success",
+    desc: 'A student success story showing how the right guidance and training can lead to real career growth.'
   },
   {
-    id: 'ScMzIvxBSi4',
-    title: 'Success Mindset Conversation',
-    desc: 'Practical life lessons aur long-term growth vision.'
+    id: 'GbXZUOKfxBw',
+    title: 'From Tech Learner to Network Engineer',
+    desc: 'See how NG Networks helps learners build strong networking foundations and move toward successful IT careers.'
   },
+
 ];
 
 export const nitinPoints = [
-  'Youth empowerment aur guidance par strong focus',
-  'Community-led growth model ke supporter',
-  'Inspiration ke saath execution-based approach',
-  'Students aur aspirants ko practical direction dene wali identity',
+  'Focused on youth empowerment and career guidance',
+  'Advocate of community-driven growth',
+  'Believes in execution alongside inspiration',
+  'Provides practical direction to students and aspirants',
 ];

@@ -1,50 +1,71 @@
 import { motion } from 'framer-motion';
-import { nitinPoints } from '../data/siteData';
-import SectionTitle from './SectionTitle';
 
 const NitinSection = () => {
   return (
-    <section id="nitin" className="py-20 sm:py-24">
-      <div className="section-shell grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -28 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7 }}
-          className="glass-card rounded-[32px] p-6 sm:p-8"
-        >
-          <div className="mx-auto flex h-[280px] w-full max-w-sm animate-float items-center justify-center rounded-[28px] border border-white/10 bg-gradient-to-br from-brand-400/15 via-violet-500/10 to-transparent text-center">
-            <div>
-              <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white text-2xl font-black text-slate-950 shadow-soft">
-                NG
-              </div>
-              <p className="mt-5 text-xl font-semibold text-white">Nitin Goswami</p>
-              <p className="mt-1 text-sm text-slate-300">Founder / Mentor / Community Builder</p>
+    <section id="nitin" className="py-16 sm:py-20">
+      <div className="section-shell">
+        <div className="grid items-center gap-8 lg:grid-cols-2">
+
+          {/* LEFT IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative overflow-hidden rounded-[28px]"
+          >
+            <img
+              src="/images/nitin.jpg"
+              alt="Nitin Goswami"
+              className="h-[380px] w-full object-cover sm:h-[480px]"
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+            {/* Text on Image */}
+            <div className="absolute bottom-0 left-0 p-5">
+              <h3 className="text-xl font-semibold text-white sm:text-2xl">
+                Nitin Goswami
+              </h3>
+              <p className="text-sm text-slate-300">
+                Founder & CEO, NG Networks
+              </p>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        <div>
-          <SectionTitle
-            eyebrow="About Nitin Goswami"
-            title="A section dedicated to personal credibility, purpose and leadership identity"
-            description="Yeh section Nitin Goswami ko website par ek central guiding force ke roop me present karta hai. Tone inspirational hai, lekin design professional aur premium rakha gaya hai."
-          />
+          {/* RIGHT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="glass-card rounded-[28px] p-6 sm:p-8"
+          >
+            <h2 className="text-2xl font-bold text-white sm:text-3xl">
+              Founder’s Story – NG Networks
+            </h2>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {nitinPoints.map((point, index) => (
-              <motion.div
-                key={point}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.55, delay: index * 0.08 }}
-                className="glass-card rounded-[26px] p-5"
-              >
-                <p className="text-sm leading-7 text-slate-200">{point}</p>
-              </motion.div>
-            ))}
-          </div>
+            <p className="mt-5 text-sm leading-7 text-slate-300 sm:text-base sm:leading-8">
+              <span className="font-semibold text-white">Nitin Goswami</span>, Founder of NG Networks,
+              began his journey with a vision to bridge the gap between education and real-world job skills.
+              Coming from a humble background, he understood the challenges students face in finding clear
+              career direction and practical learning opportunities.
+            </p>
+
+            <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base sm:leading-8">
+              This vision led him to build NG Networks a platform focused on industry-relevant training,
+              mentorship, and placement-ready skills. Under his leadership, thousands of learners have
+              developed expertise in networking, cybersecurity, cloud computing, and IT domains.
+            </p>
+
+            <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base sm:leading-8">
+              Nitin strongly believes in discipline, consistency, and quality learning. His mission is to
+              empower students with the right guidance and opportunities to build successful careers and
+              contribute to a skilled and future-ready workforce.
+            </p>
+          </motion.div>
+
         </div>
       </div>
     </section>

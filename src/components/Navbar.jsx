@@ -1,77 +1,49 @@
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
 import { navLinks } from '../data/siteData';
 
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
-
+const Header = () => {
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <div className="section-shell pt-4">
-        <div className="glass-card flex items-center justify-between rounded-full px-5 py-3">
-          <a href="#home" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-violet-500 text-base font-bold text-white shadow-glow">
+    <header className="fixed top-0 left-0 z-50 w-full">
+      <div className="w-full border-b border-white/10 bg-gradient-to-r from-slate-950 via-[#0f1830] to-slate-950/95 backdrop-blur-xl">
+        <div className="mx-auto flex h-[56px] max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:px-10">
+          {/* Left */}
+          <a href="#home" className="flex items-center gap-3 shrink-0">
+            <div className="flex h-36px w-36px items-center justify-center rounded-full bg-gradient-to-br from-[#6ea8ff] to-[#5b5ff7] text-sm font-bold text-white shadow-lg"
+              style={{ height: '36px', width: '36px' }}>
               NG
             </div>
-            <div>
-              <p className="text-sm font-semibold text-white">NG Network</p>
-              <p className="text-xs text-slate-400">Premium Demo Website</p>
+
+            <div className="leading-tight">
+              <p className="text-[14px] font-semibold text-white"> Network</p>
+              {/* <p className="text-[11px] text-slate-400">Premium Demo Website</p> */}
             </div>
           </a>
 
-          <nav className="hidden items-center gap-7 lg:flex">
-            {navLinks.map((item) => (
+          {/* Center */}
+          <nav className="hidden items-center gap-8 lg:flex">
+            {navLinks.map((link) => (
               <a
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium text-slate-200 transition hover:text-brand-300"
+                key={link.href}
+                href={link.href}
+                className="text-[14px] font-medium text-slate-200 transition hover:text-white"
               >
-                {item.label}
+                {link.label}
               </a>
             ))}
-            <a
-              href="#admission"
-              className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:scale-105"
-            >
-              Apply Now
-            </a>
           </nav>
 
-          <button
-            className="inline-flex rounded-full border border-white/10 p-2 text-slate-100 lg:hidden"
-            onClick={() => setOpen((prev) => !prev)}
-            aria-label="Toggle menu"
+          {/* Right */}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScgffvRxgk2PM1H0L-xUENxnFN19mn6mpkmVfDKK2sfInGi1w/viewform?pli=1"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2 text-[14px] font-semibold text-slate-900 transition hover:bg-slate-200"
           >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+            Apply Now
+          </a>
         </div>
-
-        {open && (
-          <div className="glass-card mt-3 rounded-3xl p-5 lg:hidden">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="text-sm font-medium text-slate-200 transition hover:text-brand-300"
-                >
-                  {item.label}
-                </a>
-              ))}
-              <a
-                href="#admission"
-                onClick={() => setOpen(false)}
-                className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950"
-              >
-                Apply Now
-              </a>
-            </div>
-          </div>
-        )}
       </div>
     </header>
   );
 };
 
-export default Navbar;
+export default Header;
