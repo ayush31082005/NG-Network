@@ -7,7 +7,7 @@ const repeated = [...youtubeVideos, ...youtubeVideos];
 
 const YoutubeSection = () => {
   return (
-    <section id="youtube" className="py-10 sm:py-14">
+    <section id="youtube" className="py-4 sm:py-6">
       <div className="section-shell">
         <SectionTitle
           eyebrow="YouTube Channel"
@@ -16,7 +16,7 @@ const YoutubeSection = () => {
           align="center"
         />
 
-        <div className="mt-4 flex justify-center">
+        <div className="mt-1 flex justify-center">
           <a
             href="https://www.youtube.com/@ngnetworkss"
             target="_blank"
@@ -32,7 +32,7 @@ const YoutubeSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
-          className="mt-6 overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-4 sm:p-5"
+          className="mt-3 overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-4 sm:p-5"
         >
           <div className="marquee-track flex gap-5 animate-marqueeReverse">
             {repeated.map((video, index) => (
@@ -57,7 +57,7 @@ const YoutubeSection = () => {
                   </div>
                 </div>
 
-                <div className="p-5">
+                <div className="p-3">
                   <h3 className="text-lg font-semibold text-white">{video.title}</h3>
                   <p className="mt-2 text-sm leading-7 text-slate-300">{video.desc}</p>
                 </div>

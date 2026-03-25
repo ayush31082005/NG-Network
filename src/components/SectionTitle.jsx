@@ -7,7 +7,7 @@ const SectionTitle = ({ eyebrow, title, description, align = 'left' }) => {
         } max-w-3xl`}
     >
       {eyebrow && (
-        <p className="mb-4 text-sm uppercase tracking-[0.28em] text-brand-200">
+        <p className="mb-1 text-sm uppercase tracking-[0.28em] text-brand-200">
           {eyebrow}
         </p>
       )}
@@ -17,7 +17,7 @@ const SectionTitle = ({ eyebrow, title, description, align = 'left' }) => {
       </h2>
 
       {description && (
-        <p className="mt-4 text-base leading-7 text-slate-300 sm:text-lg">
+        <p className="mt-2 text-base leading-7 text-slate-300 sm:text-lg">
           {description}
         </p>
       )}

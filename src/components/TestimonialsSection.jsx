@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-10 sm:py-14">
+    <section id="testimonials" className="py-8 sm:py-10">
       <div className="section-shell">
         <SectionTitle
           eyebrow="Testimonials"
@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
           align="center"
         />
 
-        <div className="mt-6">
+        <div className="mt-4">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
                     <Quote className="shrink-0 text-brand-300" size={20} />
                   </div>
 
-                  <div className="mt-3 flex gap-1">
+                  <div className="mt-2 flex gap-1">
                     {[...Array(5)].map((_, starIndex) => (
                       <Star
                         key={starIndex}
@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
                     ))}
                   </div>
 
-                  <p className="mt-4 text-xs leading-6 text-slate-300 sm:text-sm">
+                  <p className="mt-3 text-xs leading-6 text-slate-300 sm:text-sm">
                     “{item.quote}”
                   </p>
                 </div>

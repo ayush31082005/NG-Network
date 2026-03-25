@@ -40,7 +40,7 @@ const HeroSection = () => {
       </div>
 
       {/* 🔥 CONTENT */}
-      <div className="section-shell relative z-10 py-10 sm:py-14 lg:py-18">
+      <div className="section-shell relative z-10 py-6 sm:py-8 lg:py-10">
         <div className="flex min-h-[75vh] items-center justify-center text-center">
           <div className="mx-auto max-w-5xl">
 
@@ -60,7 +60,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, scaleX: 0.6 }}
               animate={{ opacity: 1, scaleX: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mx-auto mt-6 h-2 w-56 rounded-full bg-gradient-to-r from-yellow-300 via-amber-400 to-transparent shadow-[0_0_30px_rgba(251,191,36,0.7)] sm:w-72"
+              className="mx-auto mt-4 h-1.5 w-56 rounded-full bg-gradient-to-r from-yellow-300 via-amber-400 to-transparent shadow-[0_0_20px_rgba(251,191,36,0.6)] sm:w-72"
             />
 
             {/* BUTTONS */}
@@ -68,7 +68,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+              className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
             >
               {/* 🔥 FIXED BUTTON */}
               <a

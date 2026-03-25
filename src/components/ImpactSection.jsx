@@ -98,7 +98,7 @@ const ImpactSection = () => {
   }, []);
 
   return (
-    <section id="impact" ref={sectionRef} className="py-12 sm:py-16">
+    <section id="impact" ref={sectionRef} className="py-8 sm:py-10">
       <div className="section-shell">
         <SectionTitle
           eyebrow="OUR IMPACT"
@@ -107,41 +107,38 @@ const ImpactSection = () => {
           align="center"
         />
 
-        {/* TOP BOX - ONLY 2 CARDS VISIBLE */}
-        <div className="mt-6 mx-auto max-w-6xl glass-card rounded-[32px] p-4 sm:p-6">
-          <div className="flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {impactStats.map((item, index) => (
-              <div
-                key={item.label}
-                ref={(el) => (statsRef.current[index] = el)}
-                className="relative min-w-[80%] snap-center overflow-hidden rounded-[24px] border border-white/10 bg-white/5 p-5 text-center sm:min-w-[calc(33.33%-14px)]"
+        <div className="mt-4 flex gap-4 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory lg:grid lg:grid-cols-5 lg:overflow-visible lg:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {impactStats.map((item, index) => (
+            <div
+              key={item.title}
+              ref={(el) => (statsRef.current[index] = el)}
+              className="relative min-w-[240px] snap-center overflow-hidden rounded-[20px] border border-white/10 bg-white/5 p-4 text-center lg:min-w-0"
+            >
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 sm:text-xs">
+                {item.title}
+              </p>
+
+              <p
+                ref={(el) => (valueRefs.current[index] = el)}
+                className="mt-3 text-2xl font-bold text-white sm:text-3xl"
               >
-                <p className="text-base font-semibold uppercase tracking-wider text-slate-300 sm:text-lg">
-                  {item.title}
-                </p>
+                {typeof item.endValue === 'number'
+                  ? `0${item.suffix || ''}`
+                  : item.value}
+              </p>
 
-                <p
-                  ref={(el) => (valueRefs.current[index] = el)}
-                  className="mt-4 text-3xl font-bold text-white sm:text-4xl"
-                >
-                  {typeof item.endValue === 'number'
-                    ? `0${item.suffix || ''}`
-                    : item.value}
-                </p>
+              <p className="mt-1.5 text-[11px] font-medium leading-relaxed text-slate-500 sm:text-xs text-balance">
+                {item.label}
+              </p>
 
-                <p className="mt-2 text-xs font-medium leading-relaxed text-slate-400">
-                  {item.label}
-                </p>
-
-                <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-brand-400/10 blur-2xl" />
-              </div>
-            ))}
-          </div>
+              <div className="absolute -right-4 -top-4 h-12 w-12 rounded-full bg-brand-400/5 blur-xl" />
+            </div>
+          ))}
         </div>
 
 
-        {/* BOTTOM AUTO SLIDER */}
-        <div className="mt-12 overflow-hidden">
+
+        <div className="mt-6 overflow-hidden">
           <div className="flex justify-center">
             <div ref={trackRef} className="flex gap-4 sm:gap-5">
               {repeated.map((item, index) => (

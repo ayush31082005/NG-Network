@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-12 sm:py-16">
+    <section id="about" className="py-8 sm:py-10">
       <div className="section-shell">
         <div className="grid items-stretch overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl lg:grid-cols-2">
           {/* Left Content */}
@@ -11,7 +11,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7 }}
-            className="relative flex items-center px-6 py-10 sm:px-10 sm:py-14 lg:px-16"
+            className="relative flex items-center px-6 py-6 sm:px-10 sm:py-10 lg:px-16"
           >
             {/* premium glow */}
             <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-brand-400/10 blur-3xl" />
@@ -22,7 +22,7 @@ const AboutSection = () => {
                 About NG Networks
               </h2>
 
-              <p className="mt-6 text-base leading-8 text-slate-300 sm:text-lg sm:leading-9">
+              <p className="mt-4 text-base leading-8 text-slate-300 sm:text-lg sm:leading-9">
                 Empowering the next generation of{' '}
                 <span className="font-semibold text-white">IT professionals</span>{' '}
                 with cutting-edge training in{' '}
