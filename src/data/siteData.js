@@ -16,22 +16,24 @@ export const heroStats = [
 
 export const impactStats = [
   {
-    icon: '👨‍🎓',
-    value: '1000+',
+    title: 'STUDENTS',
+    endValue: 5000,
+    suffix: '+',
     label: 'Students Trained',
   },
   {
-    icon: '💼',
-    value: '500+',
+    title: 'EARNING',
+    endValue: 4999,
+    suffix: '+',
     label: 'Students Started Earning',
   },
   {
-    icon: '⭐',
-    value: 'Trusted',
+    title: 'RATING',
+    endValue: 4.9,
+    suffix: '',
     label: 'by Students Across India',
   },
 ];
-
 export const impactItems = [
   {
     title: 'Career Guidance Workshops',

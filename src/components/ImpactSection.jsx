@@ -24,6 +24,7 @@ const ImpactSection = () => {
   const trackRef = useRef(null);
   const sectionRef = useRef(null);
   const statsRef = useRef([]);
+  const valueRefs = useRef([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -43,6 +44,27 @@ const ImpactSection = () => {
         delay: 0.2,
       });
 
+      impactStats.forEach((item, index) => {
+        const valueObj = { value: 0 };
+        const el = valueRefs.current[index];
+        if (!el) return;
+
+        gsap.to(valueObj, {
+          value: item.endValue,
+          duration: 2,
+          delay: 0.4 + index * 0.2,
+          ease: 'power2.out',
+          onUpdate: () => {
+            const isDecimal = item.endValue % 1 !== 0;
+            const currentValue = isDecimal
+              ? valueObj.value.toFixed(1)
+              : Math.floor(valueObj.value);
+
+            el.textContent = `${currentValue}${item.suffix || ''}`;
+          },
+        });
+      });
+
       const track = trackRef.current;
       if (!track) return;
 
@@ -57,8 +79,16 @@ const ImpactSection = () => {
 
       const parent = track.parentElement;
       if (parent) {
-        parent.addEventListener('mouseenter', () => tween.pause());
-        parent.addEventListener('mouseleave', () => tween.resume());
+        const handleEnter = () => tween.pause();
+        const handleLeave = () => tween.resume();
+
+        parent.addEventListener('mouseenter', handleEnter);
+        parent.addEventListener('mouseleave', handleLeave);
+
+        return () => {
+          parent.removeEventListener('mouseenter', handleEnter);
+          parent.removeEventListener('mouseleave', handleLeave);
+        };
       }
     }, sectionRef);
 
@@ -83,10 +113,17 @@ const ImpactSection = () => {
               ref={(el) => (statsRef.current[index] = el)}
               className="glass-card rounded-[28px] p-6 text-center"
             >
-              <div className="text-3xl">{item.icon}</div>
-              <p className="mt-4 text-2xl font-bold text-white sm:text-3xl">
-                {item.value}
+              <p className="text-2xl font-medium uppercase tracking-wide text-slate-200 sm:text-3xl">
+                {item.title}
               </p>
+
+              <p
+                ref={(el) => (valueRefs.current[index] = el)}
+                className="mt-4 text-3xl font-bold text-white sm:text-4xl"
+              >
+                0{item.suffix || ''}
+              </p>
+
               <p className="mt-2 text-sm leading-6 text-slate-300">
                 {item.label}
               </p>
