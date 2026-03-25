@@ -105,31 +105,40 @@ const ImpactSection = () => {
           align="center"
         />
 
-        {/* Impact Stats */}
-        <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          {impactStats.map((item, index) => (
-            <div
-              key={item.label}
-              ref={(el) => (statsRef.current[index] = el)}
-              className="glass-card rounded-[28px] p-6 text-center"
-            >
-              <p className="text-2xl font-medium uppercase tracking-wide text-slate-200 sm:text-3xl">
-                {item.title}
-              </p>
+        {/* Impact Stats Container */}
+        <div className="mt-8 mx-auto max-w-4xl glass-card rounded-[28px] p-5 sm:p-6">
+          <div className="max-h-[460px] overflow-y-auto pr-2 custom-scrollbar">
+            <div className="grid grid-cols-2 gap-4">
+              {impactStats.map((item, index) => (
+                <div
+                  key={item.label}
+                  ref={(el) => (statsRef.current[index] = el)}
+                  className="relative overflow-hidden rounded-[20px] bg-white/5 border border-white/10 p-5 text-center transition-all duration-300 hover:bg-white/10 hover:border-white/20"
+                >
+                  <p className="text-sm font-semibold uppercase tracking-wider text-slate-300 sm:text-base">
+                    {item.title}
+                  </p>
 
-              <p
-                ref={(el) => (valueRefs.current[index] = el)}
-                className="mt-4 text-3xl font-bold text-white sm:text-4xl"
-              >
-                0{item.suffix || ''}
-              </p>
+                  <p
+                    ref={(el) => (valueRefs.current[index] = el)}
+                    className="mt-4 text-2xl font-bold text-white sm:text-3xl"
+                  >
+                    0{item.suffix || ''}
+                  </p>
 
-              <p className="mt-2 text-sm leading-6 text-slate-300">
-                {item.label}
-              </p>
+                  <p className="mt-2 text-[12px] font-medium leading-tight text-slate-400">
+                    {item.label}
+                  </p>
+                  
+                  {/* Subtle background glow for each card */}
+                  <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-brand-400/5 blur-2xl" />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
+
+
 
         {/* GSAP Slider */}
         <div className="mt-12 overflow-hidden">

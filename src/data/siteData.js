@@ -23,7 +23,7 @@ export const impactStats = [
   },
   {
     title: 'EARNING',
-    endValue: 4999,
+    endValue: 4599,
     suffix: '+',
     label: 'Students Started Earning',
   },
@@ -32,6 +32,16 @@ export const impactStats = [
     endValue: 4.9,
     suffix: '',
     label: 'by Students Across India',
+  },
+  {
+    title: 'REAL TIME TRAINING',
+    value: '100%',
+    label: 'Live practical learning',
+  },
+  {
+    title: 'JOB GUARANTEE',
+    value: 'ASSURED',
+    label: 'Career-focused support',
   },
 ];
 export const impactItems = [
