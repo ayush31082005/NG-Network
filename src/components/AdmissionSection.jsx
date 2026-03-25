@@ -58,24 +58,24 @@ const AdmissionSection = () => {
           align="center"
         />
 
-        <div className="mt-3 grid gap-6 lg:grid-cols-2 lg:items-stretch">
+        <div className="mt-1 grid gap-6 lg:grid-cols-2 lg:items-stretch">
           {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-card flex h-full flex-col rounded-[28px] p-5 sm:p-6"
+            className="glass-card flex h-full flex-col rounded-[28px] p-3 sm:p-4"
           >
             <p className="text-xs uppercase tracking-[0.25em] text-brand-200">
               Admission Process
             </p>
 
-            <h3 className="mt-3 text-xl font-bold text-white sm:text-2xl">
+            <h3 className="mt-2 text-xl font-bold text-white sm:text-2xl">
               Complete your registration in simple steps
             </h3>
 
-            <div className="mt-4 flex flex-1 flex-col space-y-3">
+            <div className="mt-2 flex flex-1 flex-col space-y-3">
               {admissionSteps?.map((step, index) => (
                 <div
                   key={index}
@@ -89,7 +89,7 @@ const AdmissionSection = () => {
               ))}
             </div>
 
-            <div className="mt-4 rounded-2xl border border-brand-300/20 bg-brand-400/10 p-4">
+            <div className="mt-2 rounded-2xl border border-brand-300/20 bg-brand-400/10 p-4">
               <p className="text-sm leading-6 text-slate-200">
                 Please enter correct personal, academic, and fee details before
                 submitting the application.
@@ -103,7 +103,7 @@ const AdmissionSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-card h-[600px] rounded-[28px] p-5 sm:p-6 lg:p-8 flex flex-col"
+            className="glass-card h-[600px] rounded-[28px] p-3 sm:p-4 flex flex-col"
           >
             <p className="text-xs uppercase tracking-[0.25em] text-brand-200 shrink-0">
               Application Form
@@ -119,12 +119,12 @@ const AdmissionSection = () => {
 
             <form
               onSubmit={handleSubmit}
-              className="mt-4 flex-1 overflow-y-auto pr-2"
+              className="mt-2 flex-1 overflow-y-auto pr-2"
             >
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-2 sm:grid-cols-2">
                 {/* Name */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Name
                   </label>
                   <input
@@ -140,7 +140,7 @@ const AdmissionSection = () => {
 
                 {/* Father Name */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Father Name
                   </label>
                   <input
@@ -156,7 +156,7 @@ const AdmissionSection = () => {
 
                 {/* DOB */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Date of Birth
                   </label>
                   <input
@@ -171,7 +171,7 @@ const AdmissionSection = () => {
 
                 {/* Contact */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Contact
                   </label>
                   <input
@@ -187,7 +187,7 @@ const AdmissionSection = () => {
 
                 {/* Email */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Email
                   </label>
                   <input
@@ -203,7 +203,7 @@ const AdmissionSection = () => {
 
                 {/* Program Enrolled */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Program Enrolled
                   </label>
                   <input
@@ -219,7 +219,7 @@ const AdmissionSection = () => {
 
                 {/* Address */}
                 <div className="sm:col-span-2">
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Address
                   </label>
                   <textarea
@@ -235,7 +235,7 @@ const AdmissionSection = () => {
 
                 {/* Graduation Degree */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Graduation Degree
                   </label>
                   <input
@@ -250,7 +250,7 @@ const AdmissionSection = () => {
 
                 {/* Graduation Pass Out Year */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Graduation Pass Out Year
                   </label>
                   <input
@@ -265,7 +265,7 @@ const AdmissionSection = () => {
 
                 {/* Master Degree */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Master Degree
                   </label>
                   <input
@@ -280,7 +280,7 @@ const AdmissionSection = () => {
 
                 {/* Master Pass Out Year */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Master Pass Out Year
                   </label>
                   <input
@@ -295,7 +295,7 @@ const AdmissionSection = () => {
 
                 {/* Certification */}
                 <div className="sm:col-span-2">
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Add Any Certification
                   </label>
                   <textarea
@@ -310,7 +310,7 @@ const AdmissionSection = () => {
 
                 {/* Total Fee Application */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Total Fee Application
                   </label>
                   <input
@@ -325,7 +325,7 @@ const AdmissionSection = () => {
 
                 {/* Fee Paid */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Fee Paid
                   </label>
                   <input
@@ -340,7 +340,7 @@ const AdmissionSection = () => {
 
                 {/* Payment Method */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Method of Payment
                   </label>
                   <select
@@ -370,7 +370,7 @@ const AdmissionSection = () => {
 
                 {/* Signature */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Signature Upload
                   </label>
 
@@ -388,7 +388,7 @@ const AdmissionSection = () => {
 
                 {/* Proof Upload */}
                 <div className="sm:col-span-2">
-                  <label className="mb-2 block text-sm font-medium text-white">
+                  <label className="mb-1 block text-sm font-medium text-white">
                     Upload Proof
                   </label>
                   <input

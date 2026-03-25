@@ -11,7 +11,7 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7 }}
-            className="relative flex items-center px-6 py-6 sm:px-10 sm:py-10 lg:px-16"
+            className="relative flex items-center px-6 py-4 sm:px-10 sm:py-6 lg:px-16"
           >
             {/* premium glow */}
             <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-brand-400/10 blur-3xl" />
@@ -22,7 +22,7 @@ const AboutSection = () => {
                 About NG Networks
               </h2>
 
-              <p className="mt-4 text-base leading-8 text-slate-300 sm:text-lg sm:leading-9">
+              <p className="mt-2 text-base leading-8 text-slate-300 sm:text-lg sm:leading-9">
                 Empowering the next generation of{' '}
                 <span className="font-semibold text-white">IT professionals</span>{' '}
                 with cutting-edge training in{' '}

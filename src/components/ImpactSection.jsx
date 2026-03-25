@@ -8,7 +8,7 @@ const ImpactCard = ({ item }) => (
     <div className="flex items-start justify-between gap-4">
       <div>
         <h3 className="text-base font-semibold text-white">{item.title}</h3>
-        <p className="mt-2 text-xs leading-6 text-slate-300">{item.desc}</p>
+        <p className="mt-1 text-xs leading-6 text-slate-300">{item.desc}</p>
       </div>
 
       <span className="rounded-full border border-brand-300/20 bg-brand-400/10 px-2 py-0.5 text-[10px] font-medium text-brand-200">
@@ -107,12 +107,12 @@ const ImpactSection = () => {
           align="center"
         />
 
-        <div className="mt-4 flex gap-4 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory lg:grid lg:grid-cols-5 lg:overflow-visible lg:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="mt-4 grid grid-cols-2 gap-3 lg:grid-cols-5">
           {impactStats.map((item, index) => (
             <div
               key={item.title}
               ref={(el) => (statsRef.current[index] = el)}
-              className="relative min-w-[240px] snap-center overflow-hidden rounded-[20px] border border-white/10 bg-white/5 p-4 text-center lg:min-w-0"
+              className={`relative overflow-hidden rounded-[20px] border border-white/10 bg-white/5 p-3 text-center ${index === 4 ? 'col-span-2 sm:col-span-1' : ''}`}
             >
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 sm:text-xs">
                 {item.title}
@@ -120,14 +120,14 @@ const ImpactSection = () => {
 
               <p
                 ref={(el) => (valueRefs.current[index] = el)}
-                className="mt-3 text-2xl font-bold text-white sm:text-3xl"
+                className="mt-1.5 text-2xl font-bold text-white sm:text-3xl"
               >
                 {typeof item.endValue === 'number'
                   ? `0${item.suffix || ''}`
                   : item.value}
               </p>
 
-              <p className="mt-1.5 text-[11px] font-medium leading-relaxed text-slate-500 sm:text-xs text-balance">
+              <p className="mt-0.5 text-[11px] font-medium leading-relaxed text-slate-500 sm:text-xs text-balance">
                 {item.label}
               </p>
 
@@ -138,7 +138,7 @@ const ImpactSection = () => {
 
 
 
-        <div className="mt-6 overflow-hidden">
+        <div className="mt-4 overflow-hidden">
           <div className="flex justify-center">
             <div ref={trackRef} className="flex gap-4 sm:gap-5">
               {repeated.map((item, index) => (

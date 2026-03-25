@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
           align="center"
         />
 
-        <div className="mt-4">
+        <div className="mt-2 text-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -45,7 +45,7 @@ const TestimonialsSection = () => {
               {visibleTestimonials.map((item, index) => (
                 <div
                   key={`${item.name}-${index}`}
-                  className="glass-card rounded-[24px] p-4 sm:p-5"
+                  className="glass-card rounded-[24px] p-3 sm:p-4 text-left"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
                     <Quote className="shrink-0 text-brand-300" size={20} />
                   </div>
 
-                  <div className="mt-2 flex gap-1">
+                  <div className="mt-1 flex gap-1">
                     {[...Array(5)].map((_, starIndex) => (
                       <Star
                         key={starIndex}
@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
                     ))}
                   </div>
 
-                  <p className="mt-3 text-xs leading-6 text-slate-300 sm:text-sm">
+                  <p className="mt-1.5 text-xs leading-6 text-slate-300 sm:text-sm">
                     “{item.quote}”
                   </p>
                 </div>
@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
             </motion.div>
           </AnimatePresence>
 
-          <div className="mt-6 flex justify-center gap-2">
+          <div className="mt-4 flex justify-center gap-2">
             {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, index) => {
               const dotIndex = index * 2;
               const isActive = currentIndex === dotIndex;

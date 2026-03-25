@@ -40,7 +40,7 @@ const NitinSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="glass-card rounded-[28px] p-3 text-center sm:p-4"
+            className="glass-card rounded-[28px] p-2 text-center sm:p-3"
           >
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               Founder’s Story – NG Networks
@@ -53,13 +53,13 @@ const NitinSection = () => {
               career direction and practical learning opportunities.
             </p>
 
-            <p className="mt-2 text-sm leading-7 text-slate-300 sm:text-base sm:leading-8">
+            <p className="mt-1 text-sm leading-7 text-slate-300 sm:text-base sm:leading-8">
               This vision led him to build NG Networks a platform focused on industry-relevant training,
               mentorship, and placement-ready skills. Under his leadership, thousands of learners have
               developed expertise in networking, cybersecurity, cloud computing, and IT domains.
             </p>
 
-            <p className="mt-2 text-sm leading-7 text-slate-300 sm:text-base sm:leading-8">
+            <p className="mt-1 text-sm leading-7 text-slate-300 sm:text-base sm:leading-8">
               Nitin strongly believes in discipline, consistency, and quality learning. His mission is to
               empower students with the right guidance and opportunities to build successful careers and
               contribute to a skilled and future-ready workforce.
