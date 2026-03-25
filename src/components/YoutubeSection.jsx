@@ -7,15 +7,16 @@ const repeated = [...youtubeVideos, ...youtubeVideos];
 
 const YoutubeSection = () => {
   return (
-    <section id="youtube" className="py-16 sm:py-20">
+    <section id="youtube" className="py-10 sm:py-14">
       <div className="section-shell">
         <SectionTitle
           eyebrow="YouTube Channel"
           title="Watch the latest sessions, success stories and career guidance videos"
           description="Explore featured videos from the NG Networks YouTube channel in a smooth scrolling layout."
+          align="center"
         />
 
-        <div className="mt-6 flex justify-center">
+        <div className="mt-4 flex justify-center">
           <a
             href="https://www.youtube.com/@ngnetworkss"
             target="_blank"
@@ -31,7 +32,7 @@ const YoutubeSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7 }}
-          className="mt-8 overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-4 sm:p-5"
+          className="mt-6 overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-4 sm:p-5"
         >
           <div className="marquee-track flex gap-5 animate-marqueeReverse">
             {repeated.map((video, index) => (

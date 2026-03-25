@@ -38,7 +38,7 @@ const AdmissionSection = () => {
   };
 
   return (
-    <section id="admission" className="py-14 sm:py-16">
+    <section id="admission" className="py-10 sm:py-12">
       <div className="section-shell">
         <SectionTitle
           eyebrow="Admissions"
@@ -47,7 +47,7 @@ const AdmissionSection = () => {
           align="center"
         />
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-2 lg:items-stretch">
+        <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:items-stretch">
           {/* LEFT: Admission Process */}
           <motion.div
             initial={{ opacity: 0, x: -25 }}

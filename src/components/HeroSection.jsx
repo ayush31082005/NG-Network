@@ -40,7 +40,7 @@ const HeroSection = () => {
       </div>
 
       {/* 🔥 CONTENT */}
-      <div className="section-shell relative z-10 py-16 sm:py-20 lg:py-24">
+      <div className="section-shell relative z-10 py-10 sm:py-14 lg:py-18">
         <div className="flex min-h-[75vh] items-center justify-center text-center">
           <div className="mx-auto max-w-5xl">
 

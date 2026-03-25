@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-16 sm:py-20">
+    <section id="testimonials" className="py-10 sm:py-14">
       <div className="section-shell">
         <SectionTitle
           eyebrow="Testimonials"
@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
           align="center"
         />
 
-        <div className="mt-10">
+        <div className="mt-6">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -45,27 +45,27 @@ const TestimonialsSection = () => {
               {visibleTestimonials.map((item, index) => (
                 <div
                   key={`${item.name}-${index}`}
-                  className="glass-card rounded-[28px] p-6 sm:p-7"
+                  className="glass-card rounded-[24px] p-4 sm:p-5"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-xl font-semibold text-white">{item.name}</p>
-                      <p className="mt-1 text-sm text-brand-200">{item.role}</p>
+                      <p className="text-lg font-semibold text-white">{item.name}</p>
+                      <p className="mt-0.5 text-xs text-brand-200">{item.role}</p>
                     </div>
-                    <Quote className="shrink-0 text-brand-300" size={28} />
+                    <Quote className="shrink-0 text-brand-300" size={20} />
                   </div>
 
-                  <div className="mt-5 flex gap-1">
+                  <div className="mt-3 flex gap-1">
                     {[...Array(5)].map((_, starIndex) => (
                       <Star
                         key={starIndex}
-                        size={16}
+                        size={12}
                         className="fill-yellow-400 text-yellow-400"
                       />
                     ))}
                   </div>
 
-                  <p className="mt-5 text-sm leading-7 text-slate-300 sm:text-base">
+                  <p className="mt-4 text-xs leading-6 text-slate-300 sm:text-sm">
                     “{item.quote}”
                   </p>
                 </div>

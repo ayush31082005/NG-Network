@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const NitinSection = () => {
   return (
-    <section id="nitin" className="py-16 sm:py-20">
+    <section id="nitin" className="py-10 sm:py-14">
       <div className="section-shell">
         <div className="grid items-center gap-8 lg:grid-cols-2">
 
@@ -40,7 +40,7 @@ const NitinSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="glass-card rounded-[28px] p-6 sm:p-8"
+            className="glass-card rounded-[28px] p-6 text-center sm:p-8"
           >
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               Founder’s Story – NG Networks
@@ -65,6 +65,7 @@ const NitinSection = () => {
               contribute to a skilled and future-ready workforce.
             </p>
           </motion.div>
+
 
         </div>
       </div>

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 sm:py-24">
+    <section id="about" className="py-12 sm:py-16">
       <div className="section-shell">
         <div className="grid items-stretch overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl lg:grid-cols-2">
           {/* Left Content */}
@@ -17,7 +17,7 @@ const AboutSection = () => {
             <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-brand-400/10 blur-3xl" />
             <div className="absolute bottom-0 right-0 h-40 w-40 rounded-full bg-violet-500/10 blur-3xl" />
 
-            <div className="relative max-w-2xl">
+            <div className="relative mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
                 About NG Networks
               </h2>
@@ -40,6 +40,7 @@ const AboutSection = () => {
                 </span>
               </p>
             </div>
+
           </motion.div>
 
           {/* Right Image */}
