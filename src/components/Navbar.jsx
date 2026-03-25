@@ -8,7 +8,7 @@ const Header = () => {
           {/* Left */}
           <a href="#home" className="flex items-center gap-3 shrink-0">
             <img
-              src="/logo1.png"
+              src="/logo2.jpeg"
               alt="Network Logo"
               className="h-10 w-auto object-contain"
             />
